@@ -21,7 +21,7 @@
 }
 
 .contact p {
-  display: inline-block;
+  display: inline;
   color: var(--primary-color);
   font-size: var(--small-fs);
   padding-left: 10px;
