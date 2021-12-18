@@ -1,0 +1,72 @@
+.contact {
+  margin-bottom: 12px;
+}
+
+.contact > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 2%;
+}
+
+.contact > div > div {
+  width: 50%;
+}
+
+.map {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.contact div h3 {
+  font-size: var(--big-fs);
+  letter-spacing: 1.8px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.contact div p {
+  font-size: var(--small-fs);
+  letter-spacing: 1.8px;
+  color: black;
+}
+
+.contact div p + div{
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 960px) {
+  .contact > div {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 30px 0 0 0;
+    margin-bottom: -12px;
+  }
+
+  .contact > div > div:first-of-type {
+    padding: 0 2%;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact > div > div {
+    width: 100%;
+  }
+
+  .contact > div > div:last-of-type {
+    margin-top: 10px;
+  }
+
+  .contact > div > div:last-of-type h3 {
+    padding: 0 2%;
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .map {
+    border-radius: 0;
+  }
+}

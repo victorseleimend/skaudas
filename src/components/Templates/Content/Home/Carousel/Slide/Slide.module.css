@@ -1,0 +1,67 @@
+.carouselItem {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  position: absolute;
+  transition: .3s ease-in-out;
+  left: 0;
+}
+
+.prevSlide {
+  left: -100%;
+  opacity: 0;
+}
+
+.currentSlide {
+  left: 0;
+  opacity: 1;
+}
+
+.nextSlide {
+  left: 100%;
+  opacity: 0;
+}
+
+.carouselItem > div {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 2%;
+}
+
+.carouselItem h3 {
+  font-size: var(--big-fs);
+  font-weight: 500;
+  background-color: var(--primary-color);
+}
+
+.carouselItem p {
+  font-size: var(--medium-fs);
+  font-weight: 200;
+  background-color: var(--secondary-color);
+}
+
+.carouselItem h3, .carouselItem p{
+  user-select: none;
+  color: white;
+  letter-spacing: 1.8px;
+  width: fit-content;
+  padding-bottom: 4px;
+  padding-right: 50px;
+  padding-left: 6px;
+}
+
+@media screen and (max-width: 640px) {
+  .carouselItem > div {
+    left: 0;
+    padding-left: 2%;
+  }
+  .carouselItem h3, .carouselItem p {
+    padding-right: 6px;
+  }
+}

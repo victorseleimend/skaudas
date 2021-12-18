@@ -1,0 +1,9 @@
+.customizer {
+  background-color: var(--primary-color);
+}
+
+.organizer {
+  display: flex;
+  justify-content: center;
+  padding: 22px 0;
+}

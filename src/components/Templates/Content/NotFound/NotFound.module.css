@@ -1,0 +1,20 @@
+.notFound {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notFound h3 {
+  font-size: var(--big-fs);
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.notFound p {
+  font-size: var(--medium-fs);
+  letter-spacing: 1.8px;
+}

@@ -1,0 +1,64 @@
+.menuModule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px 2%;
+}
+
+.menuModule h3 {
+  color: white;
+  font-size: var(--big-fs);
+  letter-spacing: 1.8px;
+  font-weight: 500;
+}
+
+.menuModule button {
+  background: none;
+  color: white;
+  border: none;
+  outline: 0;
+  font-size: var(--medium-fs);
+  cursor: pointer;
+  transition: .3s;
+  transform: rotate(0deg)
+}
+
+button.active {
+  transform: rotate(-90deg);
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2%;
+  border-radius: 10px;
+  align-items: center;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.menuItem h5 {
+  letter-spacing: 1.8px;
+  font-weight: 500;
+  font-size: var(--small-fs);
+}
+
+.menuItem p {
+  font-size: 1.1rem;
+  text-align: right;
+  letter-spacing: 1.8px;
+}
+
+@media screen and (max-width: 640px) {
+  .menuModule {
+    padding: 10px 4%;
+  }
+
+  .menuItem {
+    gap: 40px;
+    width: 100%;
+  }
+}

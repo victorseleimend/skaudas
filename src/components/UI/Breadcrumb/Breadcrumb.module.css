@@ -1,0 +1,38 @@
+.breadcrumb {
+  width: 100%;
+  background-color: var(--primary-color);
+  margin-bottom: 16px;
+  padding: 35px 0 35px 2%;
+}
+
+.breadcrumb div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.breadcrumb span {
+  color: white;
+  font-size: var(--small-fs);
+  margin: 0 10px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  font-size: var(--small-fs);
+  letter-spacing: 1.8px;
+  color: white;
+  text-transform: capitalize;
+  transition: .3s;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb h4 {
+  font-weight: 500;
+  font-size: var(--small-fs);
+  letter-spacing: 1.8px;
+  color: white;
+  text-transform: capitalize;
+}

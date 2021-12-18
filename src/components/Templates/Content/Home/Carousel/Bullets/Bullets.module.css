@@ -1,0 +1,32 @@
+.bullets {
+  position: absolute;
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bullets button {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  opacity: .5;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.bullets button:hover {
+  opacity: 1;
+}
+
+.bullets button.activated {
+  transition: .3s;
+  opacity: 1;
+  border: 2px solid white;
+  background-color: var(--primary-color);
+}

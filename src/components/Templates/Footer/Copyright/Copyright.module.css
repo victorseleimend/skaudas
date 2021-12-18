@@ -1,0 +1,37 @@
+.copyright {
+  padding: 10px 2%;
+}
+
+.organizer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright img {
+  width: 100%;
+  max-width: 142px;
+}
+
+.copyright p, .copyright small {
+  font-size: var(--small-fs);
+  color: white;
+}
+
+.copyright span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 960px) {
+  .organizer {
+    flex-direction: column;
+  }
+
+  .copyright p {
+    margin-top: 12px;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}

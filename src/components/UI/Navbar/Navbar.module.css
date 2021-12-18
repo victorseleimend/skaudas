@@ -1,0 +1,51 @@
+.headerNav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+  padding-right: 2%;
+}
+
+.headerNav ul {
+  position: fixed;
+  top: 32.5px;
+  z-index: 2;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .mobileMenu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 3;
+    width: 45%;
+    top: 0;
+    right: -86%;
+    box-shadow: 0px 0px 4px 0px rgba(179, 179, 179, 0.9);
+    background: white;
+    transition: .4s ease-in-out;
+  }
+
+  .navbar .mobileMenuIsVisible {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navbar .mobileMenu {
+    width: 85%;
+  }
+}

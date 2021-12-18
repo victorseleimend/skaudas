@@ -1,0 +1,63 @@
+.application > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 0 2%;
+}
+
+.application > div > div {
+  width: 50%;
+}
+
+.application div img {
+  width: 95%;
+  border-radius: 10px;
+}
+
+.application div h3 {
+  font-size: var(--big-fs);
+  letter-spacing: 1.8px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.application div p {
+  font-size: var(--medium-fs);
+  letter-spacing: 1.8px;
+  color: black;
+}
+
+.application div p + div{
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  .application > div {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 30px 0 0 0;
+    margin-bottom: -3px;
+  }
+
+  .application div img {
+    border-radius: 0;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
+  }
+
+  .application > div > div:first-of-type {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .application > div > div:last-of-type{
+    width: 90%;
+    padding: 0 2%;
+    margin-top: 10px;
+  }
+}

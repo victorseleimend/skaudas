@@ -1,0 +1,20 @@
+.header {
+  width: 100%;
+  background-color: white;
+  padding: 16px 0;
+  position: fixed;
+  height: 90px;
+  z-index: 1;
+}
+
+.organizer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    height: 78px;
+  }
+}

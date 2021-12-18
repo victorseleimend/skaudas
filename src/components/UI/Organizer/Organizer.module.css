@@ -1,0 +1,10 @@
+.organizer {
+  position: relative;
+  top: 90px;
+}
+
+@media screen and (max-width: 640px) {
+  .organizer {
+    top: 78px;
+  }
+}

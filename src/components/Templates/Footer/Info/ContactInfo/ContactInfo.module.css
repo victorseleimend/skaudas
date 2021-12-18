@@ -1,0 +1,15 @@
+.contactInfo p {
+  display: flex;
+}
+
+.contactInfo svg {
+  font-size: var(--small-fs);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .contactInfo {
+    display: flex;
+    justify-content: center;
+  }
+}

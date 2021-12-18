@@ -1,0 +1,15 @@
+.footerButton {
+  transition: .2s;
+  cursor: pointer;
+  font-size: var(--small-fs);
+  color: var(--primary-color);
+  letter-spacing: 1.8px;
+  background: none;
+  border: none;
+  margin-left: 3px;
+  outline: 0;
+}
+
+.footerButton:hover {
+  color: var(--secondary-color)
+}

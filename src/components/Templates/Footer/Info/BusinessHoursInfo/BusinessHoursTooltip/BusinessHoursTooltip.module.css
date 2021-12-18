@@ -1,0 +1,24 @@
+.businessHoursTooltip {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+  width: 120px;
+  border-radius: 20px;
+}
+
+.businessHoursTooltip span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.closed {
+  background-color: rgb(218, 0, 0);
+}
+
+.opened {
+  background-color: rgb(27, 146, 27);
+}
