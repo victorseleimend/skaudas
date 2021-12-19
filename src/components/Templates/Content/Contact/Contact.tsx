@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCommentDollar,
+  faSuitcase,
   faPhoneVolume,
   faHandshake,
   faMapMarkerAlt,
@@ -51,7 +51,7 @@ const Contact = () => {
         <div className={classes.emails}>
           <div>
             <a href="mailto:comercial@skaudas.com.br">
-              <FontAwesomeIcon icon={faCommentDollar} />
+              <FontAwesomeIcon icon={faSuitcase} />
             </a>
             <p>Comercial</p>
           </div>
