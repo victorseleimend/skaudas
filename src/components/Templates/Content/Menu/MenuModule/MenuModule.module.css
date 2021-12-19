@@ -70,10 +70,11 @@ button.active {
 }
 
 .filter h5 {
-  font-size: var(--small-fs);
+  font-size: var(--medium-fs);
   font-weight: 700;
   letter-spacing: 1.8px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .filter div {
