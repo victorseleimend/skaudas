@@ -12,7 +12,7 @@ import FooterButton from "../../../../UI/FooterButton/FooterButton";
 const ContactInfo: FC<{
   icon: FontAwesomeIconProps["icon"];
   message: string;
-  onClickHandler: () => void;
+  onClickHandler?: () => void;
 }> = ({ icon, message, onClickHandler }) => {
   return (
     <li className={classes.contactInfo}>
@@ -22,6 +22,10 @@ const ContactInfo: FC<{
       </p>
     </li>
   );
+};
+
+ContactInfo.defaultProps = {
+  onClickHandler: () => {},
 };
 
 export default ContactInfo;

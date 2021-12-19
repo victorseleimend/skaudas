@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import classes from "./FooterButton.module.css";
 
-const FooterButton: FC<{ onClickHandler: () => void }> = ({
+const FooterButton: FC<{ onClickHandler?: () => void }> = ({
   children,
   onClickHandler,
 }) => {
@@ -15,6 +15,10 @@ const FooterButton: FC<{ onClickHandler: () => void }> = ({
       {children}
     </button>
   );
+};
+
+FooterButton.defaultProps = {
+  onClickHandler: () => {},
 };
 
 export default FooterButton;
