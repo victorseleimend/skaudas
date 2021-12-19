@@ -41,6 +41,16 @@ const Info = () => {
     window.open("https://api.whatsapp.com/send?phone=551125396713");
   };
 
+  const contactEmailHandler = (type: string) => {
+    if (type === "recrutamento") {
+      window.location.href = "mailto:recrutamento@skaudas.com.br";
+    } else if (type === "comercial") {
+      window.location.href = "mailto:comercial@skaudas.com.br";
+    } else {
+      window.location.href = "mailto:ouvidoria@skaudas.com.br";
+    }
+  };
+
   return (
     <Container cssClass={classes.organizer}>
       <div>
@@ -53,22 +63,21 @@ const Info = () => {
               message="11 2539-6713"
             />
             <ContactInfo
-              onClickHandler={() => console.log("contact info")}
+              onClickHandler={() => contactEmailHandler("comercial")}
               icon={faStore}
               message="comercial@skaudas.com.br"
             />
             <ContactInfo
-              onClickHandler={() => console.log("contact info")}
+              onClickHandler={() => contactEmailHandler("ouvidoria")}
               icon={faPhoneAlt}
               message="ouvidoria@skaudas.com.br"
             />
             <ContactInfo
-              onClickHandler={() => console.log("contact info")}
+              onClickHandler={() => contactEmailHandler("recrutamento")}
               icon={faRocket}
               message="recrutamento@skaudas.com.br"
             />
             <ContactInfo
-              onClickHandler={() => console.log("contact info")}
               icon={faMapMarkedAlt}
               message={`Avenida Casa Verde 3087,
               Casa Verde - São Paulo. CEP: 02519-200`}
