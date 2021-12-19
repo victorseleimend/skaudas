@@ -1,44 +1,69 @@
 .contact {
-  padding: 40px 2%;
+  padding: 50px 2%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
+.contact > p {
+  font-size: var(--small-fs);
+  margin-top: 6px;
+}
+
+.contact > div:first-of-type {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .contact h3 {
-  margin-bottom: 10px;
   font-size: var(--big-fs);
   letter-spacing: 1.8px;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .contact h4 {
-  margin: 25px 0 5px 0;
   font-size: var(--medium-fs);
   letter-spacing: 1.8px;
   font-weight: 400;
+  margin-top: 24px;
 }
 
-.contact p {
-  display: inline;
-  color: var(--primary-color);
-  font-size: var(--small-fs);
-  padding-left: 10px;
-}
-
-.contact svg {
-  color: var(--primary-color);
-  font-size: var(--small-fs);
+.contact button {
+  background: none;
+  border: none;
+  outline: 0;
+  cursor: pointer;
 }
 
 .contact a {
-  color: var(--primary-color);
-  font-size: var(--small-fs);
-  padding-left: 10px;
+  font-size: var(--big-fs);
 }
 
-div.sm a > svg {
-  margin-top: 5px;
+.contact svg {
   font-size: var(--big-fs);
+  color: var(--primary-color);
+}
+
+.sm div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.emails {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.emails div p {
+  font-size: 1.2rem;
+  letter-spacing: 1.8px;
+  margin-top: 3px;
 }
