@@ -8,6 +8,23 @@
   padding: 10px 2%;
 }
 
+div > div.menuModule > div {
+  color: white;
+  font-size: var(--small-fs);
+}
+
+.menuModule div button {
+  margin: 0 2px;
+  font-size: var(--small-fs);
+}
+
+.menuModule .activated {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
 .menuModule h3 {
   color: white;
   font-size: var(--big-fs);
@@ -52,6 +69,45 @@ button.active {
   letter-spacing: 1.8px;
 }
 
+.filter h5 {
+  font-size: var(--small-fs);
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-align: center;
+}
+
+.filter div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.filter div label {
+  font-size: var(--medium-fs);
+  margin-top: 6px;
+}
+
+.filter div label input {
+  margin-right: 5px;
+}
+
+.filter > div:last-of-type {
+  margin: 20px auto;
+}
+
+.filter > div > button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  outline: 0;
+  font-size: var(--medium-fs);
+  letter-spacing: 1.8px;
+  border: none;
+}
+
 @media screen and (max-width: 640px) {
   .menuModule {
     padding: 10px 4%;
@@ -60,5 +116,17 @@ button.active {
   .menuItem {
     gap: 40px;
     width: 100%;
+  }
+
+  .menuModule h3 {
+    font-size: var(--medium-fs);
+  }
+
+  div > div.menuModule > div {
+    font-size: .9rem;
+  }
+
+  .menuModule div button {
+    font-size: var(--small-fs);
   }
 }
