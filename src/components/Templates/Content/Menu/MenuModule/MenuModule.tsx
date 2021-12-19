@@ -35,6 +35,7 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
       buttonRef.current?.classList.add("MenuModule_active__2xY0N");
     } else {
       buttonRef.current?.classList.remove("MenuModule_active__2xY0N");
+      setFilter(false);
     }
   }, [menuIsVisible]);
 
