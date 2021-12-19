@@ -28,40 +28,6 @@ const Menu = () => {
     <>
       <Breadcrumb links={["/", "/cardapio"]} />
       <Container cssClass={classes.menu}>
-        <div className={classes.specs}>
-          <h3>Tamanhos</h3>
-          <div>
-            <div>
-              <h4>Pequena</h4>
-              <p>25CM</p>
-            </div>
-            <div>
-              <h4>Média</h4>
-              <p>35CM</p>
-            </div>
-            <div>
-              <h4>Grande</h4>
-              <p>40CM</p>
-            </div>
-          </div>
-        </div>
-        <div className={classes.specs}>
-          <h3>Espessuras</h3>
-          <div>
-            <div>
-              <h4>Fina</h4>
-              <p>2MM</p>
-            </div>
-            <div>
-              <h4>Média</h4>
-              <p>4MM</p>
-            </div>
-            <div>
-              <h4>Grossa</h4>
-              <p>6MM</p>
-            </div>
-          </div>
-        </div>
         {MenuItems.map((m) => (
           <MenuModule key={m.id} m={m} />
         ))}
