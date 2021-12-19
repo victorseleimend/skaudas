@@ -46,6 +46,50 @@
   margin-top: 20px;
 }
 
+.table {
+  width: 50%;
+  padding: 0 2%;
+  margin: 0 auto 30px auto;
+}
+
+.table > div {
+  margin-bottom: 10px;
+}
+
+.table > div > h4 {
+  font-size: var(--medium-fs);
+  letter-spacing: 1.8px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+.table > div > div {
+  display: flex;
+}
+
+.table > div > div > div {
+  text-align: center;
+  width: calc(100% / 3);
+}
+
+.table > div > div > div:nth-of-type(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.table > div > div > div p {
+  text-align: center;
+  margin-top: 3px;
+}
+
+.table > div h5 {
+  font-size: var(--small-fs);
+  font-weight: 500;
+}
+
 @keyframes changeColor {
   0% {
     color: var(--primary-color);
@@ -62,6 +106,10 @@
 
 @media screen and (max-width: 640px) {
   .menu .text p {
+    width: 100%;
+  }
+
+  .table {
     width: 100%;
   }
 }
