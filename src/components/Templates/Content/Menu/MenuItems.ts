@@ -345,7 +345,7 @@ export default [
         id: 50,
         name: "Chocolate preto",
         description: "Chocolate preto",
-        pasta: "Doce  e Brasileira",
+        pasta: "Doce e Brasileira",
       },
       {
         id: 51,

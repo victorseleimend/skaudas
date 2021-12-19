@@ -9,6 +9,9 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
   const [seeAll, setSeeAll] = useState(true);
   const [menuOpts, setMenuOpts] = useState<string[]>([]);
+  // eslint-disable-next-line prettier/prettier
+  const [filteredOptions, setFilteredOptions] = useState<string>();
+  const [filter, setFilter] = useState(false);
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -20,6 +23,7 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
     if (isVisible === "seeAll") {
       setSeeAll(true);
       setMenuIsVisible(true);
+      setFilter(false);
     } else {
       setSeeAll(false);
       setMenuIsVisible(true);
@@ -45,7 +49,12 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
   }, []);
 
   const onChangeHandler = (opts: string) => {
-    console.log(opts);
+    setFilter(false);
+    setFilteredOptions(opts);
+  };
+
+  const filterClickHandler = () => {
+    setFilter(true);
   };
 
   return (
@@ -82,11 +91,11 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
           <h5>Escolha a Massa</h5>
           <div>
             {menuOpts.map((opts) => (
-              <label htmlFor={opts} key={opts}>
+              <label htmlFor={`${m.type + opts}`} key={opts}>
                 <input
                   type="radio"
                   name="filter"
-                  id={opts}
+                  id={`${m.type + opts}`}
                   onChange={onChangeHandler.bind(this, opts)}
                 />
                 {opts}
@@ -94,7 +103,9 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
             ))}
           </div>
           <div>
-            <button type="button">Filtrar</button>
+            <button type="button" onClick={filterClickHandler}>
+              Filtrar
+            </button>
           </div>
         </div>
       )}
@@ -108,6 +119,19 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
             </Card>
           </div>
         ))}
+      {filter &&
+        filteredOptions &&
+        m.menu?.map(
+          (mn: any) =>
+            mn.pasta.includes(filteredOptions) && (
+              <div className={classes.menuItems} key={mn.id}>
+                <Card cssClass={classes.menuItem}>
+                  <h5>{mn.name}</h5>
+                  <p>{mn.description}</p>
+                </Card>
+              </div>
+            )
+        )}
     </div>
   );
 };
