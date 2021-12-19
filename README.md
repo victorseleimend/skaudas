@@ -1,2 +1,2 @@
-# skaudas-frontend
+# skaudas
 Skaudas frontend
