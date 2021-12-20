@@ -74,7 +74,7 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
         m.menu.map((mn: any) => (
           <div className={classes.menuItems} key={mn.id}>
             <Card cssClass={classes.menuItem}>
-              <h5 style={{ textAlign: "justify" }}>{mn.name}</h5>
+              <h5>{mn.name}</h5>
               <p style={{ textAlign: "justify" }}>{mn.description}</p>
             </Card>
           </div>
