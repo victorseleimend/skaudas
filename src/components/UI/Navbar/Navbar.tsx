@@ -21,7 +21,7 @@ const Navbar: FC<{ mobileMenu?: boolean }> = ({ mobileMenu }) => {
   return mobileMenu ? (
     createPortal(
       <nav className={`${classes.navbar} ${classes.headerNav}`}>
-        {mobileMenuIsVisible && <Overlay />}
+        {mobileMenuIsVisible && <Overlay onClickHandler={closeMenuHandler} />}
         <MobileMenu
           mobileMenuIsVisible={mobileMenuIsVisible}
           getShowMobileMenu={getShowMobileMenu}
