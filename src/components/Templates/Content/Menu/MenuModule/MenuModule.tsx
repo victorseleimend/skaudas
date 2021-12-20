@@ -69,6 +69,16 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
           <FontAwesomeIcon icon={faSortDown} />
         </button>
       </div>
+      {menuIsVisible &&
+        m.type === "Promoções" &&
+        m.menu.map((mn: any) => (
+          <div className={classes.menuItems} key={mn.id}>
+            <Card cssClass={classes.menuItem}>
+              <h5 style={{ textAlign: "justify" }}>{mn.name}</h5>
+              <p style={{ textAlign: "justify" }}>{mn.description}</p>
+            </Card>
+          </div>
+        ))}
       {menuIsVisible && m.type !== "Promoções" && (
         <div className={classes.filter}>
           <div>
