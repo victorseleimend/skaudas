@@ -7,7 +7,6 @@ import Card from "../../../../UI/Card/Card";
 
 const MenuModule: FC<{ m: any }> = ({ m }) => {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
-  const [seeAll, setSeeAll] = useState(true);
   const [menuOpts, setMenuOpts] = useState<string[]>([]);
   // eslint-disable-next-line prettier/prettier
   const [filteredOptions, setFilteredOptions] = useState<string>();
@@ -17,17 +16,6 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
 
   const menuIsVisibleHandler = () => {
     setMenuIsVisible((v) => !v);
-  };
-
-  const seeAllHandler = (isVisible: string) => {
-    if (isVisible === "seeAll") {
-      setSeeAll(true);
-      setMenuIsVisible(true);
-      setFilter(false);
-    } else {
-      setSeeAll(false);
-      setMenuIsVisible(true);
-    }
   };
 
   useEffect(() => {
@@ -46,6 +34,10 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
       setMenuOpts(["Brasileira", "Doce", "Integral", "Vegana"]);
     } else if (m.type === "Bordas") {
       setMenuOpts(["Brasileira", "Doce"]);
+    } else if (m.type === "Bebidas") {
+      setMenuOpts(["Refrigerante", "Cerveja"]);
+    } else if (m.type === "Esfihas") {
+      setMenuOpts(["Brasileira"]);
     }
   }, []);
 
@@ -62,46 +54,27 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
     <div>
       <div className={classes.menuModule}>
         <h3>{m.type}</h3>
-        {m.type !== "Promoções" &&
-          m.type !== "Esfihas" &&
-          m.type !== "Bebidas" && (
-            <div>
-              <button
-                type="button"
-                className={`${seeAll && classes.activated}`}
-                onClick={seeAllHandler.bind(null, "seeAll")}
-              >
-                Ver tudo
-              </button>{" "}
-              ou{" "}
-              <button
-                type="button"
-                className={`${!seeAll && classes.activated}`}
-                onClick={seeAllHandler.bind(null, "filter")}
-              >
-                Filtrar
-              </button>
-            </div>
-          )}
         <button ref={buttonRef} type="button" onClick={menuIsVisibleHandler}>
           <FontAwesomeIcon icon={faSortDown} />
         </button>
       </div>
-      {!seeAll && menuIsVisible && (
+      {menuIsVisible && m.type !== "Promoções" && (
         <div className={classes.filter}>
-          <h5>Escolha a Massa</h5>
           <div>
-            {menuOpts.map((opts) => (
-              <label htmlFor={`${m.type + opts}`} key={opts}>
-                <input
-                  type="radio"
-                  name="filter"
-                  id={`${m.type + opts}`}
-                  onChange={onChangeHandler.bind(this, opts)}
-                />
-                {opts}
-              </label>
-            ))}
+            <h5>Escolha a Massa</h5>
+            <div>
+              {menuOpts.map((opts) => (
+                <label htmlFor={`${m.type + opts}`} key={opts}>
+                  <input
+                    type="radio"
+                    name="filter"
+                    id={`${m.type + opts}`}
+                    onChange={onChangeHandler.bind(this, opts)}
+                  />
+                  {opts}
+                </label>
+              ))}
+            </div>
           </div>
           <div>
             <button type="button" onClick={filterClickHandler}>
@@ -110,16 +83,6 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
           </div>
         </div>
       )}
-      {seeAll &&
-        menuIsVisible &&
-        m.menu?.map((mn: any) => (
-          <div className={classes.menuItems} key={mn.id}>
-            <Card cssClass={classes.menuItem}>
-              <h5>{mn.name}</h5>
-              <p>{mn.description}</p>
-            </Card>
-          </div>
-        ))}
       {filter &&
         filteredOptions &&
         m.menu?.map(
