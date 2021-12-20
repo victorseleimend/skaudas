@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { createPortal } from "react-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useInitModal from "../../hooks/useInitModal";
 import Overlay from "../Overlay/Overlay";
 import classes from "./InitModal.module.css";
@@ -17,6 +17,12 @@ const InitModal = () => {
   const disableModalHandler = () => {
     setModalIsVisible(false);
   };
+
+  useEffect(() => {
+    if (modalIsVisible) {
+      document.querySelector("body")!.style.overflow = "hidden";
+    }
+  }, [modalIsVisible]);
 
   return createPortal(
     modalIsVisible && (
