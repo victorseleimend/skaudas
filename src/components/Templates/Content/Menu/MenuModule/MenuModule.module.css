@@ -13,6 +13,11 @@ div > div.menuModule > div {
   font-size: var(--small-fs);
 }
 
+div > div.menuModule > div div {
+  display: flex;
+  gap: 10px;
+}
+
 .menuModule div button {
   margin: 0 2px;
   font-size: var(--small-fs);
