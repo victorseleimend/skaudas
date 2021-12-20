@@ -1,33 +1,141 @@
 .initModal {
   width: 50%;
-  height: 50vh;
+  height: 80vh;
   z-index: 1000;
   position: fixed;
+  box-shadow: 0px 0px 4px 0px rgb(43, 42, 42);
   top: 50%;
-  background-color: white;
+  border-radius: 12px;
   left: 50%;
+  background-color: white;
   transform: translate(-50%, -50%);
+  padding: 2%;
+  overflow-y: auto;
 }
 
 .initModal button {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  position: sticky;
+  left: 100%;
+  top: 0;
   cursor: pointer;
-  background-color: white;
+  background: none;
   border: 0;
+  z-index: 999;
+}
+
+.initModal button svg {
   font-size: var(--big-fs);
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.promo > div:first-of-type {
+  text-align: center;
+}
+
+.promo div h1 {
+  font-size: var(--big-fs);
+  color: var(--primary-color);
+}
+
+.promo div h2 {
+  font-size: var(--medium-fs);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.promo > div:first-of-type p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.promo > div:first-of-type {
+  margin-bottom: 10px;
+}
+
+.modalContent {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2%;
+}
+
+.modalContent > div {
+  width: 100%;
+}
+
+.modalContent > div:first-of-type {
+  margin-bottom: 10px;
+}
+
+.modalContent > div h3 {
+  font-size: var(--big-fs);
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.modalContent > div > div {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent > div > div > div{
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0px 0px 4px 0px rgb(136, 136, 136);
+  padding: 2%;
+}
+
+.modalContent div p {
+  color: var(--secondary-color);
+  font-size: var(--small-fs);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.modalContent img {
+  width: 50%;
+  max-width: 100px;
 }
 
 @media screen and (max-width: 640px) {
   .initModal {
     width: 90%;
     height: 50vh;
-    z-index: 1000;
-    position: fixed;
-    top: 50%;
-    background-color: white;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 5%;
+  }
+
+  .modalContent > div h3 {
+    font-size: var(--medium-fs);
+    margin-top: 5px;
+  }
+
+  .modalContent div p {
+    font-size: 1rem;
+  }
+
+  .modalContent img {
+    width: 70px;
+  }
+
+  .modalContent > div > div {
+    flex-direction: column;
   }
 }
