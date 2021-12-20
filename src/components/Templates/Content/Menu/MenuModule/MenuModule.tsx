@@ -57,11 +57,14 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
           <h3>{m.type}</h3>
           {m.sizes && m.length && (
             <div>
-              <p>Tamanhos: {m.sizes}</p>/<p>Espessuras: {m.length}</p>
+              <p>Tamanhos: {m.sizes}</p>
+              <span>/</span>
+              <p>
+                {m.type === "Esfihas" ? "Espessura:" : "Espessuras:"} {m.length}
+              </p>
             </div>
           )}
         </div>
-
         <button ref={buttonRef} type="button" onClick={menuIsVisibleHandler}>
           <FontAwesomeIcon icon={faSortDown} />
         </button>

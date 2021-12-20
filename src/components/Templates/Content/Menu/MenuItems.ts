@@ -7,8 +7,8 @@ export default [
   {
     id: 1,
     type: "Pizzas",
-    sizes: "25CM, 35CM, 40CM",
-    length: "2MM, 4MM, 6MM",
+    sizes: "25CM | 35CM | 40CM",
+    length: "2MM | 4MM | 6MM",
     menu: [
       {
         id: 0,
@@ -360,8 +360,8 @@ export default [
   {
     id: 2,
     type: "Bordas",
-    sizes: "25CM, 35CM, 40CM",
-    length: "2MM, 4MM, 6MM",
+    sizes: "25CM | 35CM | 40CM",
+    length: "2MM | 4MM | 6MM",
     menu: [
       {
         id: 0,
@@ -410,7 +410,7 @@ export default [
   {
     id: 3,
     type: "Esfihas",
-    sizes: "10CM, 15CM",
+    sizes: "10CM | 15CM",
     length: "3MM",
     menu: [
       {
@@ -478,8 +478,8 @@ export default [
   {
     id: 4,
     type: "Calzones",
-    sizes: "25CM, 35CM, 40CM",
-    length: "2MM, 4MM, 6MM",
+    sizes: "25CM | 35CM | 40CM",
+    length: "2MM | 4MM | 6MM",
     menu: [
       {
         id: 0,
