@@ -57,7 +57,7 @@
 }
 
 .modalContent {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   gap: 15px;
   justify-content: center;
@@ -119,16 +119,19 @@
   .initModal {
     width: 90%;
     height: 50vh;
-    padding: 5%;
+    padding: 3%;
   }
 
   .modalContent > div h3 {
     font-size: var(--medium-fs);
-    margin-top: 5px;
   }
 
   .modalContent div p {
     font-size: 1rem;
+  }
+
+  .modalContent > div:first-of-type {
+    margin-bottom: 0;
   }
 
   .modalContent img {
