@@ -5,6 +5,7 @@ import About from "./About/About";
 import Application from "./Application/Application";
 import Menu from "./Menu/Menu";
 import Contact from "./Contact/Contact";
+import InitModal from "../../../UI/InitModal/InitModal";
 
 const Home = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const Home = () => {
 
   return (
     <>
+      <InitModal />
       <Carousel />
       <Application />
       <Menu />
