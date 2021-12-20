@@ -1,0 +1,33 @@
+.initModal {
+  width: 50%;
+  height: 50vh;
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.initModal button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: 0;
+  font-size: var(--big-fs);
+}
+
+@media screen and (max-width: 640px) {
+  .initModal {
+    width: 90%;
+    height: 50vh;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
