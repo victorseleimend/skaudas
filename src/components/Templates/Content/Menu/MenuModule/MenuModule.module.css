@@ -114,6 +114,20 @@ button.active {
   border: none;
 }
 
+div.menuPromoItem {
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+div.menuItemObs {
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--primary-color);
+}
+
 @media screen and (max-width: 640px) {
   .menuModule {
     padding: 10px 4%;

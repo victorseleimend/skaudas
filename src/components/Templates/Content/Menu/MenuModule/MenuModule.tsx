@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -55,7 +56,7 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
       <div className={classes.menuModule}>
         <div>
           <h3>{m.type}</h3>
-          {m.sizes && m.length && (
+          {m.sizes && m.length && m.type !== "Pizzas" && (
             <div>
               <p>Tamanhos: {m.sizes}</p>
               <span>/</span>
@@ -73,7 +74,7 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
         m.type === "Promoções" &&
         m.menu.map((mn: any) => (
           <div className={classes.menuItems} key={mn.id}>
-            <Card cssClass={classes.menuItem}>
+            <Card cssClass={`${classes.menuItem} ${classes.menuPromoItem}`}>
               <h5>{mn.name}</h5>
               <p style={{ textAlign: "justify" }}>{mn.description}</p>
             </Card>
@@ -104,19 +105,40 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
           </div>
         </div>
       )}
-      {filter &&
-        filteredOptions &&
-        m.menu?.map(
-          (mn: any) =>
-            mn.pasta.includes(filteredOptions) && (
-              <div className={classes.menuItems} key={mn.id}>
-                <Card cssClass={classes.menuItem}>
-                  <h5>{mn.name}</h5>
-                  <p>{mn.description}</p>
-                </Card>
-              </div>
-            )
-        )}
+      {filter && filteredOptions && (
+        <>
+          {m.type === "Pizzas" && (
+            <div className={classes.menuItems}>
+              <Card cssClass={`${classes.menuItem} ${classes.menuItemObs}`}>
+                <p>
+                  Tamanhos:{" "}
+                  {filteredOptions.includes("Italiana")
+                    ? "35CM"
+                    : filteredOptions.includes("Integral")
+                    ? "25CM | 35CM"
+                    : m.sizes}
+                </p>
+                <span>/</span>
+                <p>
+                  Espessuras:{" "}
+                  {filteredOptions.includes("Italiana") ? "4MM" : m.length}
+                </p>
+              </Card>
+            </div>
+          )}
+          {m.menu?.map(
+            (mn: any) =>
+              mn.pasta.includes(filteredOptions) && (
+                <div className={classes.menuItems} key={mn.id}>
+                  <Card cssClass={classes.menuItem}>
+                    <h5>{mn.name}</h5>
+                    <p>{mn.description}</p>
+                  </Card>
+                </div>
+              )
+          )}
+        </>
+      )}
     </div>
   );
 };
