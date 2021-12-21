@@ -9,6 +9,7 @@ import classes from "./InitModal.module.css";
 import pizzaPromo from "../../../images/pizzas.png";
 import calzonesPromo from "../../../images/calzones.png";
 import pepsiPromo from "../../../images/pepsi.png";
+import openedImg from "../../../images/openedImg.jpg";
 
 const InitModal = () => {
   const { modalIsVisible, setModalIsVisible } = useInitModal();
@@ -51,10 +52,13 @@ const InitModal = () => {
             </button>
           </div>
           {modalNum === 0 ? (
-            <div className={classes.open}>
-              <h1>INAUGURAÇÃO!!!</h1>
-              <h2>Será realizada no dia 15/01/2022</h2>
-              <p>Prepare-se para sentir explosões de sabores!</p>
+            <div className={classes.firstModal}>
+              <img src={openedImg} alt="Uma pizza fatiada em três pedaços" />
+              <div className={classes.open}>
+                <h1>INAUGURAÇÃO!!!</h1>
+                <h2>Será realizada no dia 15/01/2022</h2>
+                <p>Prepare-se para sentir explosões de sabores!</p>
+              </div>
             </div>
           ) : (
             <div className={classes.promo}>

@@ -9,7 +9,6 @@
   left: 50%;
   background-color: white;
   transform: translate(-50%, -50%);
-  padding: .8%;
   overflow-y: auto;
 }
 
@@ -19,9 +18,9 @@
   align-items: center;
   background-color: white;
   margin-top: -2px;
-  padding-bottom: 1%;
+  padding: 15px 2% 10px 2%;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
 }
 
 .modalBtns {
@@ -52,6 +51,10 @@
   font-size: var(--big-fs);
   color: var(--primary-color);
   font-weight: 400;
+}
+
+.promo {
+  padding: .8% 0 2% 0;
 }
 
 .promo > div:first-of-type {
@@ -145,7 +148,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: calc(100% - 40px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 10%));
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
 }
 
 .open img {
@@ -174,6 +183,18 @@
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
+}
+
+.firstModal {
+  height: calc(100% - 50.1px);
+}
+
+.firstModal > img {
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  filter: grayscale(30%);
 }
 
 @media screen and (max-width: 640px) {
