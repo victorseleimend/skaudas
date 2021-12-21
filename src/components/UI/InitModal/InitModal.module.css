@@ -149,6 +149,7 @@
   flex-direction: column;
   position: absolute;
   top: 50%;
+  width: 50%;
   left: 50%;
   transform: translate(-50%, calc(-50% + 10%));
   background-color: white;
@@ -200,6 +201,10 @@
   .initModal {
     width: 90%;
     height: 50vh;
+  }
+
+  .open {
+    width: 90%;
   }
 
   .initModal > div:first-of-type {
