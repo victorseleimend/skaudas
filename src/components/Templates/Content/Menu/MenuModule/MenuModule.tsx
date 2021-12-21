@@ -118,7 +118,6 @@ const MenuModule: FC<{ m: any }> = ({ m }) => {
                     ? "25CM | 35CM"
                     : m.sizes}
                 </p>
-                <span>/</span>
                 <p>
                   Espessuras:{" "}
                   {filteredOptions.includes("Italiana") ? "4MM" : m.length}

@@ -133,6 +133,14 @@ div.menuItemObs {
     padding: 10px 4%;
   }
 
+  .menuItemObs {
+    flex-direction: column;
+  }
+
+  .menuItemObs > p:first-of-type {
+    margin-bottom: -5px;
+  }
+
   .menuItem {
     gap: 40px;
     width: 100%;
