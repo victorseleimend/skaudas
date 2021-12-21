@@ -5,7 +5,7 @@ export default [
     menu: [
       {
         id: 0,
-        name: "Promoção de inauguração",
+        name: "Promoção de inauguração | 31/03/2022",
         description:
           "Compre duas pizzas ou dois calzones de 35CM e ganhe um refrigerante de 2 litros (Pepsi, Fanta Laranja ou Fanta Uva)",
       },
