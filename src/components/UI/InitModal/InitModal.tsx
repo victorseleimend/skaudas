@@ -21,6 +21,8 @@ const InitModal = () => {
   useEffect(() => {
     if (modalIsVisible) {
       document.querySelector("body")!.style.overflow = "hidden";
+    } else {
+      document.querySelector("body")!.style.overflow = "auto";
     }
   }, [modalIsVisible]);
 

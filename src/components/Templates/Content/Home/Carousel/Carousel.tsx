@@ -69,6 +69,35 @@ const Carousel = () => {
   };
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isDragging) {
+        setNextSlide((slideNum: number) => {
+          if (slideNum === 2) {
+            return 0;
+          }
+          return slideNum + 1;
+        });
+        setAncientSlide((slideNum: number) => {
+          if (slideNum === 2) {
+            return 0;
+          }
+          return slideNum + 1;
+        });
+        setSlideNumber((slideNum: number) => {
+          if (slideNum === 2) {
+            return 0;
+          }
+          return slideNum + 1;
+        });
+      }
+    }, 20000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
     updateSlidePos();
     setCurTranslate(0);
   }, [ancientSlide, slideNumber, nextSlide]);
