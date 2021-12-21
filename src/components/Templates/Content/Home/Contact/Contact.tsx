@@ -6,7 +6,7 @@ import classes from "./Contact.module.css";
 const Contact = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyDRQa1dbZOkU9s2mDpf_aup_skOe_Wlh2k",
+    googleMapsApiKey: "AIzaSyD3OIlPJWAwZlqov8IpAKSTHdbRq0rBkbU",
   });
 
   return (

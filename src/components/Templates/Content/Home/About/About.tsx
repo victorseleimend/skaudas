@@ -1,7 +1,6 @@
 import { faEye, faStar, faFlag } from "@fortawesome/free-solid-svg-icons";
 import classes from "./About.module.css";
 import AboutContent from "./AboutContent/AboutContent";
-import Title from "../../../../UI/Title/Title";
 
 import Container from "../../../../UI/Container/Container";
 import EnterpriseAbout from "./EnterpriseAbout/EnterpriseAbout";
