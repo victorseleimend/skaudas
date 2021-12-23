@@ -33,14 +33,16 @@
   border-radius: 10px;
   cursor: pointer;
   border: 1px solid var(--secondary-color) !important;
-  animation-name: bgAnimation;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-duration: 1s;
 }
 
 .modalBtns .activated {
   background-color: var(--primary-color) !important;
+}
+
+.modalBtns button.deactivated {
+  animation-name: deactivatedBtn;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .initModal button {
@@ -201,7 +203,7 @@
   filter: grayscale(30%);
 }
 
-@keyframes bgAnimation {
+@keyframes deactivatedBtn {
   0% {
     background-color: white;
   }

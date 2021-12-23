@@ -35,13 +35,17 @@ const InitModal = () => {
           <div>
             <div className={classes.modalBtns}>
               <button
-                className={`${modalNum === 0 && classes.activated}`}
+                className={`${
+                  modalNum === 0 ? classes.activated : classes.deactivated
+                }`}
                 type="button"
                 aria-label="botão do primeiro slide da modal"
                 onClick={() => setModalNum(0)}
               />
               <button
-                className={`${modalNum === 1 && classes.activated}`}
+                className={`${
+                  modalNum === 1 ? classes.activated : classes.deactivated
+                }`}
                 type="button"
                 aria-label="botão do segundo slide da modal"
                 onClick={() => setModalNum(1)}
