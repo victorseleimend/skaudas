@@ -33,6 +33,10 @@
   border-radius: 10px;
   cursor: pointer;
   border: 1px solid var(--secondary-color) !important;
+  animation-name: bgAnimation;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-duration: 1s;
 }
 
 .modalBtns .activated {
@@ -195,6 +199,20 @@
   position: relative;
   height: 100%;
   filter: grayscale(30%);
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-color: white;
+  }
+
+  50% {
+    background-color: var(--secondary-color);
+  }
+
+  100% {
+    background-color: white;
+  }
 }
 
 @media screen and (max-width: 640px) {
