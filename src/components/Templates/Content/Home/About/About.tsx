@@ -17,20 +17,17 @@ const About = () => {
           <EnterpriseAbout
             title="Missão"
             icon={faFlag}
-            message="Oferecer produtos diferenciados, promovendo ao consumidor
-            sensações ao despertar os sabores."
+            message="Oferecer produtos diferenciados com a ambição de despertar os sabores, promovendo sensações de satisfação aos clientes."
           />
           <EnterpriseAbout
             title="Visão"
             icon={faEye}
-            message="Ser uma empresa do setor de alimentos, reconhecida pelo consumidor
-            pela qualidade e por despertar os sentidos dos sabores."
+            message="Ser uma empresa do setor de alimentos reconhecida por despertar os sentidos dos sabores e pela qualidade oferecida aos seus clientes."
           />
           <EnterpriseAbout
             title="Valores"
             icon={faStar}
-            message=" Ética, sustentabilidade, qualidade, respeito, pontualidade,
-            responsabilidade, cordialidade."
+            message="Ética, sustentabilidade, qualidade, respeito, pontualidade, responsabilidade, cordialidade."
           />
         </Container>
       </div>

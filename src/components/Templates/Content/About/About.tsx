@@ -37,7 +37,7 @@ const About = () => {
           <EnterpriseAbout
             title="Valores"
             icon={faStar}
-            message=" Ética, sustentabilidade, qualidade, respeito, pontualidade, responsabilidade, cordialidade."
+            message="Ética, sustentabilidade, qualidade, respeito, pontualidade, responsabilidade, cordialidade."
           />
         </Container>
       </div>
