@@ -8,12 +8,6 @@ import Contact from "./Contact/Contact";
 import InitModal from "../../../UI/InitModal/InitModal";
 
 const Home = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
-  }, []);
-
   return (
     <>
       <InitModal />

@@ -18,12 +18,6 @@ import classes from "./Contact.module.css";
 const Contact = () => {
   const [view, setView] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
-  }, []);
-
   const contactNumberHandler = () => {
     window.open("https://api.whatsapp.com/send?phone=551125396713");
   };

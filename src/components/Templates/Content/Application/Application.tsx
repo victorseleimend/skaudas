@@ -14,12 +14,6 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
-  }, []);
-
   return (
     <>
       <Breadcrumb links={["/", "/app"]} />

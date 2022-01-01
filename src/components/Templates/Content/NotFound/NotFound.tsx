@@ -4,12 +4,6 @@ import { Link } from "react-router-dom";
 import classes from "./NotFound.module.css";
 
 const NotFound = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
-  }, []);
-
   return (
     <div className={classes.notFound}>
       <h3>Erro 404</h3>

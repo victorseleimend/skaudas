@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { createPortal } from "react-dom";
 import classes from "./Navbar.module.css";
 
@@ -14,8 +14,15 @@ const Navbar: FC<{ mobileMenu?: boolean }> = ({ mobileMenu }) => {
     setMobileMenuIsVisible(mobileMenuIsShowing);
   };
 
+  const toTopHandler = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   const closeMenuHandler = () => {
     setMobileMenuIsVisible(false);
+    toTopHandler();
   };
 
   return mobileMenu ? (
@@ -63,11 +70,23 @@ const Navbar: FC<{ mobileMenu?: boolean }> = ({ mobileMenu }) => {
   ) : (
     <nav className={classes.navbar}>
       <ul>
-        <Navlink path="/" message="Home" />
-        <Navlink path="/cardapio" message="Cardápio" />
-        <Navlink path="/app" message="App" />
-        <Navlink path="/sobre" message="Sobre" />
-        <Navlink path="/contato" message="Contato" />
+        <Navlink closeMenuHandler={toTopHandler} path="/" message="Home" />
+        <Navlink
+          closeMenuHandler={toTopHandler}
+          path="/cardapio"
+          message="Cardápio"
+        />
+        <Navlink closeMenuHandler={toTopHandler} path="/app" message="App" />
+        <Navlink
+          closeMenuHandler={toTopHandler}
+          path="/sobre"
+          message="Sobre"
+        />
+        <Navlink
+          closeMenuHandler={toTopHandler}
+          path="/contato"
+          message="Contato"
+        />
       </ul>
     </nav>
   );

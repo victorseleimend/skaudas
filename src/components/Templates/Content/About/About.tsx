@@ -9,12 +9,6 @@ import Breadcrumb from "../../../UI/Breadcrumb/Breadcrumb";
 import classes from "./About.module.css";
 
 const About = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-    });
-  }, []);
-
   return (
     <div className={classes.about}>
       <Breadcrumb links={["/", "/sobre"]} />
