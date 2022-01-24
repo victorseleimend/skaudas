@@ -60,7 +60,7 @@ const InitModal = () => {
               <img src={openedImg} alt="Uma pizza fatiada em três pedaços" />
               <div className={classes.open}>
                 <h1>INAUGURAÇÃO!!!</h1>
-                <h2>Será realizada no dia 26/01/2022</h2>
+                <h2>Será realizada no dia 08/02/2022</h2>
                 <p>Prepare-se para sentir explosões de sabores!</p>
               </div>
             </div>
