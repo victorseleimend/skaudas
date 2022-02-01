@@ -76,7 +76,8 @@ const InitModal = () => {
                   <h3>Ganhe</h3>
                   <div>
                     <div>
-                      <p>10% de desconto</p>
+                      <h4>10%</h4>
+                      <p>de desconto</p>
                     </div>
                   </div>
                 </div>

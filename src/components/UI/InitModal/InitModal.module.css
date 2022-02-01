@@ -203,6 +203,11 @@
   filter: grayscale(30%);
 }
 
+.modalContent h4 {
+  font-size: 5em;
+  color: var(--primary-color);
+}
+
 @keyframes deactivatedBtn {
   0% {
     background-color: white;
@@ -217,7 +222,7 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
   .initModal {
     width: 90%;
     height: 50vh;
