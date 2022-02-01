@@ -76,11 +76,7 @@ const InitModal = () => {
                   <h3>Ganhe</h3>
                   <div>
                     <div>
-                      <img src={pepsiPromo} alt="Refrigerante" />
-                      <p>
-                        Refrigerante de 2 litros (Pepsi, Fanta Laranja e Fanta
-                        Uva)
-                      </p>
+                      <p>10% de desconto</p>
                     </div>
                   </div>
                 </div>
